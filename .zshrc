@@ -18,8 +18,9 @@ export PATH=$PATH:/usr/local/Cellar/mysql@5.5/5.5.49/bin
 #export PATH=$PATH:/usr/local/Cellar/node@6/6.9.5/bin
 
 #alias
-alias add_fd='ssh-add ~/.ssh/id_rsa'
-alias add_p='ssh-add ~/.ssh/id_rsa_personal'
+alias vim="/usr/local/Cellar/vim/8.0.1200/bin/vim"
+alias add_fd="ssh-add ~/.ssh/id_rsa; git config user.email 'rajasekar.m@freshdesk.com'"
+alias add_p="ssh-add ~/.ssh/id_rsa_personal; git config user.email 'rajasekar89be@gmail.com'"
 alias sql="mysql.server start"
 alias ssql="mysql.server stop"
 alias redis="redis-server"
@@ -29,6 +30,18 @@ alias rebase="git rebase development"
 alias path="pwd|pbcopy"
 alias es="./bin/elasticsearch"
 alias sk="bundle exec sidekiq -C config/sidekiq_client.yml"
+alias clr="clear"
+alias rlvim="source ~/.vimrc"
+alias rlzsh="source ~/.zshrc"
+alias n="node"
+alias nd="node-debug"
+alias doc="docker run -it -p 4567-4578:4567-4578 -p 8080:8080 atlassianlabs/localstack"
+#NPM LIST LINKED
+alias linked="npm-list-linked"
+#GIT ALIAS
+alias syncupstream="git fetch upstream;git merge upstream/master;git push origin master"
+alias clean="git checkout ."
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
