@@ -3,12 +3,23 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/user/.oh-my-zsh
+export PATH="$PATH:/usr/local/Cellar/yarn/1.2.1/libexec/bin"
+#alias y="node /usr/local/Cellar/yarn/1.2.1/libexec/bin/yarn.js"
+export PATH=/Users/user/Documents/projects/v8/depot_tools:"$PATH"
+
+#V8 alias
+alias d8=/Users/user/Documents/projects/v8/v8/out.gn/x64.optdebug/d8
+alias tick-processot=/Users/user/Documents/projects/v8/v8/tools/mac-tick-processor
+
+#autocompletion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="jnrowe"
-# ZSH_THEME="af-magic"
+#ZSH_THEME="Spaceship"
 
 
 #MYSQL CONFIG
@@ -19,14 +30,11 @@ export PATH=$PATH:/usr/local/Cellar/mysql@5.5/5.5.49/bin
 
 #alias
 alias vim="/usr/local/Cellar/vim/8.0.1200/bin/vim"
-alias add_fd="ssh-add ~/.ssh/id_rsa; git config user.email 'rajasekar.m@freshdesk.com'"
-alias add_p="ssh-add ~/.ssh/id_rsa_personal; git config user.email 'rajasekar89be@gmail.com'"
 alias sql="mysql.server start"
 alias ssql="mysql.server stop"
 alias redis="redis-server"
 alias ss="bundle exec rails s"
 alias sr="rvm use 2.2.3@helpkit-rails"
-alias rebase="git rebase development"
 alias path="pwd|pbcopy"
 alias es="./bin/elasticsearch"
 alias sk="bundle exec sidekiq -C config/sidekiq_client.yml"
@@ -34,14 +42,23 @@ alias clr="clear"
 alias rlvim="source ~/.vimrc"
 alias rlzsh="source ~/.zshrc"
 alias n="node"
-alias nd="node-debug"
+alias nd="node --inspect-brk"
 alias doc="docker run -it -p 4567-4578:4567-4578 -p 8080:8080 atlassianlabs/localstack"
-#NPM LIST LINKED
-alias linked="npm-list-linked"
-#GIT ALIAS
-alias syncupstream="git fetch upstream;git merge upstream/master;git push origin master"
-alias clean="git checkout ."
 
+#GIT ALIAS
+alias clean="git checkout ."
+alias back="git checkout -"
+alias pom="git push origin master";
+alias rebasemaster="git rebase master"
+alias syncupstream="git fetch upstream;git merge upstream/master;git push origin master"
+alias add_fd="ssh-add ~/.ssh/id_rsa; git config user.email 'rajasekar.m@freshdesk.com'"
+alias add_p="ssh-add ~/.ssh/id_rsa_personal; git config user.email 'rajasekar89be@gmail.com'"
+
+#NPM ALIAS
+alias build="npm run build"
+alias debug="npm run debug"
+alias run="npm run run"
+alias linked="npm-list-linked"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
