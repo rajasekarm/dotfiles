@@ -53,6 +53,7 @@ alias rebasemaster="git rebase master"
 alias syncupstream="git fetch upstream;git merge upstream/master;git push origin master"
 alias add_fd="ssh-add ~/.ssh/id_rsa; git config user.email 'rajasekar.m@freshdesk.com'"
 alias add_p="ssh-add ~/.ssh/id_rsa_personal; git config user.email 'rajasekar89be@gmail.com'"
+alias backToMaster="git checkout master"
 
 #NPM ALIAS
 alias build="npm run build"
